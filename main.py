@@ -1,8 +1,24 @@
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')
+# Импорт функции получения случайных чисел
+# из модуля random.
+from random import randint
 
+# Получаем случайное число в диапазоне от 1 до 100.
+number = randint(1, 100)
+print('Угадайте число от 1 до 100')
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+while True:
+    # Получаем число от пользователя и сохраняем его в переменную.
+    guess = int(input('Введите число: '))
+
+    # Если число меньше загаданного...
+    if guess < number:
+        # ...выводим сообщение.
+        print('Ваше число меньше того, что загадано.')
+    elif guess > number:
+        # ...выводим сообщение.
+        print('Ваше число больше того, что загадано.')
+    elif guess == number:
+        # ...прерываем выполнение программы и...
+        break
+# ...выводим сообщение.
+print('Отличная интуиция! Вы угадали число :)') 
